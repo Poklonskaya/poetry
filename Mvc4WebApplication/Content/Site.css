@@ -1,0 +1,22 @@
+﻿/*a {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: rgb(9, 62, 9);
+}*/
+
+.panel {
+    min-height: 100px;
+}
+
+.header{
+    margin-bottom:30px;
+}
+
+h2 {
+    font-family: 'Times New Roman', Times, serif; /* Гарнитура текста */ 
+    font-size: 150%; /* Размер шрифта в процентах */ 
+   } 
+a {
+    font-family: 'Times New Roman', Times, serif; /* Гарнитура текста */ 
+    font-size: 160%; /* Размер шрифта в процентах */ 
+   } 

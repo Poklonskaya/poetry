@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>
+        @ViewBag.Title
+    </title>;
+
+    @*<style>
+        .wrap {
+            width: 1000px; /* Ширина */
+        }
+
+        .width50 {
+            width: 500px; /* Ширина */            
+        }
+
+        .wrap div {
+            background: #e2fb05;
+            margin: 10px;
+            padding: 20px;
+            border: 1px solid #000;
+            text-align: center;
+        }
+
+        .t {
+            /*width: 480px;*/
+            float: left;
+        }
+
+            .t div {
+                background: #b9ea68; /* Цвет фона */
+                margin: 10px;
+                padding: 20px; /* Поля */
+                -moz-box-sizing: border-box; /* Для Firefox */
+                -webkit-box-sizing: border-box; /* Для Safari и Chrome */
+                box-sizing: border-box; /* Для IE и Opera */
+            }
+
+        .t1 {
+            /*width: 1000px;*/
+            float:left
+        }
+
+            .t1 div {
+                background: #b9ea68; /* Цвет фона */
+                margin: 10px;
+                padding: 20px; /* Поля */
+                -moz-box-sizing: padding-box; /* Для Firefox */
+                -webkit-box-sizing: padding-box; /* Для Safari и Chrome */
+                box-sizing: border-box; /* Для IE и Opera */
+                /*margin-left: 520px;*/
+            }
+
+        .h {
+            width: 1000px; /* Ширина */
+            height: 100px;
+        }
+
+            .h div {
+                background: #64900f;
+                margin: 10px;
+                padding: 20px;
+                border: 1px solid #000;
+                text-align: center;
+            }
+
+        .content {
+            clear: both;
+        }
+    </style>*@
+
+    <link rel="stylesheet" href="/Content/bootstrap.css">
+    <link rel="stylesheet" href="/Content/bootstrap-theme.css">
+    <link rel="stylesheet" href="/Content/Site.css">
+
+    <script src="~/Scripts/jquery-1.9.1.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+
+
+            <ul class="nav nav-pills pull-right">
+                
+                <li class="dropdown">
+                @*<a href="http://localhost:1640/"></a>*@ 
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Авторы <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                     
+                        <li><a href="http://localhost:1640/home/index2">М.Цветаева</a></li>
+                        <li><a href="http://localhost:1640/home/index3">С.Есенин</a></li>
+                        <li><a href="http://localhost:1640/home/index4">В.Маяковский</a></li>
+                        <li><a href="http://localhost:1640/home/index5">А.Пушкин</a></li>
+                        <li><a href="http://localhost:1640/home/index6">А.Ахматова</a></li>
+                        <li><a href="http://localhost:1640/home/index7">М.Лермонтов</a></li>
+                      
+                      
+                    </ul>
+                </li>
+               
+                <li><a href="http://localhost:1640/home/">главная</a></li>
+
+            </ul>
+            
+            <h3 class="text-muted">Anna's project</h3>
+
+        </div>
+          
+
+
+
+
+
+
+         @RenderBody()
+
+        <div class="footer">
+            <p>© Hanna, 2014</p>
+        </div>
+    </div>    
+</body>
+</html>
