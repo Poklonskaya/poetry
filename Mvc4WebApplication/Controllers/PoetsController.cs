@@ -1,4 +1,5 @@
-﻿using Poetry.DomainModels;
+﻿using Mvc4WebApplication.EntityFramework;
+using Poetry.DomainModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,53 +10,18 @@ namespace Mvc4WebApplication.Controllers
 {
     public class PoetsController : Controller
     {
-        List<Poet> poets;
-
-        public PoetsController()
-        {
-            poets = new List<Poet>();
-
-            poets.Add(new Poet
-            {
-                PoetId = 1,
-                Name = "Пушкин",
-                AvatarUrl = "/Images/p.png"
-            });
-
-            poets.Add(new Poet
-            {
-                PoetId = 2,
-                Name = "Есенин",
-                AvatarUrl = "/Images/e.jpg"
-            });
-
-            poets.Add(new Poet
-            {
-                PoetId = 3,
-                Name = "Цветаева",
-                AvatarUrl = "/Images/c.jpg"
-            });
-
-            poets.Add(new Poet
-            {
-                PoetId = 4,
-                Name = "Маяковский",
-                AvatarUrl = "/Images/m.jpg"
-            });
-
-            poets.Add(new Poet
-            {
-                PoetId = 5,
-                Name = "Ахматова",
-                AvatarUrl = "/Images/a.jpg"
-            });
-        }
-
         //
         // GET: /Poets/
 
         public ActionResult Index()
-        {  
+        {
+            List<Poet> poets;
+
+            using (ApplicationDbContext db = new ApplicationDbContext())
+            {
+                poets = db.Poets.ToList();
+            }
+
             return View(poets);
         }
 
@@ -64,7 +30,12 @@ namespace Mvc4WebApplication.Controllers
 
         public ActionResult Details(int id)
         {
-            Poet poet = poets.FirstOrDefault(x => x.PoetId == id);
+            Poet poet;
+
+            using (ApplicationDbContext db = new ApplicationDbContext())
+            {
+                poet = db.Poets.FirstOrDefault(x => x.PoetId == id);
+            }
 
             return View(poet);
         }
