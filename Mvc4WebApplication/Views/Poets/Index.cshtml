@@ -1,9 +1,12 @@
 ﻿@model IEnumerable<Poetry.DomainModels.Poet>
 
+
 @{
     ViewBag.Title = "Poets";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
+
 
 <div class="row">
 
@@ -11,7 +14,7 @@
     {
         <div class="col-md-12">
             <div class="alert alert-success" role="alert">
-                <a href="http://localhost:1640/home/index5" class="alert-link">@poet.Name</a>
+                <a href="/poets/details/@poet.PoetId" class="alert-link">@poet.Name</a>
             </div>
         </div>
     }

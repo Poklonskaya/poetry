@@ -9,38 +9,48 @@ namespace Mvc4WebApplication.Controllers
 {
     public class PoetsController : Controller
     {
-        //
-        // GET: /Poets/
+        List<Poet> poets;
 
-        public ActionResult Index()
+        public PoetsController()
         {
-            var poets = new List<Poet>();
+            poets = new List<Poet>();
 
             poets.Add(new Poet
             {
+                PoetId = 1,
                 Name = "Пушкин"
             });
 
             poets.Add(new Poet
             {
+                PoetId = 2,
                 Name = "Есенин"
             });
 
             poets.Add(new Poet
             {
+                PoetId = 3,
                 Name = "Цветаева"
             });
 
             poets.Add(new Poet
             {
+                PoetId = 4,
                 Name = "Маяковский"
             });
 
             poets.Add(new Poet
             {
+                PoetId = 5,
                 Name = "Ахматова"
             });
+        }
 
+        //
+        // GET: /Poets/
+
+        public ActionResult Index()
+        {  
             return View(poets);
         }
 
@@ -49,7 +59,9 @@ namespace Mvc4WebApplication.Controllers
 
         public ActionResult Details(int id)
         {
-            return View();
+            Poet poet = poets.FirstOrDefault(x => x.PoetId == id);
+
+            return View(poet);
         }
 
         //
