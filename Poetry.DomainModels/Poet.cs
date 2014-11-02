@@ -11,6 +11,8 @@ namespace Poetry.DomainModels
         public int PoetId { get; set; }
         public string Name { get; set; }
 
+        public string AvatarUrl { get; set; }
+
         public virtual List<Post> Posts { get; set; }
     }
 }

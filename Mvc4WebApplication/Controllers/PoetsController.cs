@@ -18,31 +18,36 @@ namespace Mvc4WebApplication.Controllers
             poets.Add(new Poet
             {
                 PoetId = 1,
-                Name = "Пушкин"
+                Name = "Пушкин",
+                AvatarUrl = "/Images/p.png"
             });
 
             poets.Add(new Poet
             {
                 PoetId = 2,
-                Name = "Есенин"
+                Name = "Есенин",
+                AvatarUrl = "/Images/e.jpg"
             });
 
             poets.Add(new Poet
             {
                 PoetId = 3,
-                Name = "Цветаева"
+                Name = "Цветаева",
+                AvatarUrl = "/Images/c.jpg"
             });
 
             poets.Add(new Poet
             {
                 PoetId = 4,
-                Name = "Маяковский"
+                Name = "Маяковский",
+                AvatarUrl = "/Images/m.jpg"
             });
 
             poets.Add(new Poet
             {
                 PoetId = 5,
-                Name = "Ахматова"
+                Name = "Ахматова",
+                AvatarUrl = "/Images/a.jpg"
             });
         }
 
