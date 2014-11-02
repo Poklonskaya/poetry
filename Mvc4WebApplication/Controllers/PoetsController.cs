@@ -38,7 +38,7 @@ namespace Mvc4WebApplication.Controllers
 
             poets.Add(new Poet
             {
-                Name = ""
+                Name = "Ахматова"
             });
 
             return View(poets);
