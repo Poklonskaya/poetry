@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Poetry.DomainModels.Poet>
+
+@{
+    ViewBag.Title = "Poets";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+
+    @foreach (var poet in Model)
+    {
+        <div class="col-md-12">
+            <div class="alert alert-success" role="alert">
+                <a href="http://localhost:1640/home/index5" class="alert-link">@poet.Name</a>
+            </div>
+        </div>
+    }
+</div>
+
+<button type="button" class="btn btn-default btn-lg">
+    <span class="glyphicon glyphicon-plane"></span>
+
+</button>
+
+<button type="button" class="btn btn-default btn-lg">
+    <span class="glyphicon glyphicon-cloud"></span>
+</button>
+<button type="button" class="btn btn-default btn-lg">
+    <span class="glyphicon glyphicon-road"></span>
+</button>
+
+
+
+
+
