@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Mvc4WebApplication.EntityFramework;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Http;
@@ -24,6 +26,7 @@ namespace Mvc4WebApplication
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
+            Database.SetInitializer(new ApplicationDbInitializer());
 
             logger.Info("Application Start");
         }

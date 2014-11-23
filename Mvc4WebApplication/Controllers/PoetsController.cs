@@ -17,7 +17,7 @@ namespace Mvc4WebApplication.Controllers
         {
             List<Poet> poets;
 
-            using (ApplicationDbContext db = new ApplicationDbContext())
+            using (ApplicationDbContext db = new ApplicationDbContext("DefaultConnection"))
             {
                 poets = db.Poets.ToList();
             }
@@ -32,7 +32,7 @@ namespace Mvc4WebApplication.Controllers
         {
             Poet poet;
 
-            using (ApplicationDbContext db = new ApplicationDbContext())
+            using (ApplicationDbContext db = new ApplicationDbContext("DefaultConnection"))
             {
                 poet = db.Poets.FirstOrDefault(x => x.PoetId == id);
             }
