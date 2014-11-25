@@ -2,6 +2,7 @@
 using Poetry.DomainModels;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -39,6 +40,40 @@ namespace Mvc4WebApplication.Controllers
 
             return View(poet);
         }
+
+
+
+        class POETS
+    {
+        static void Main(string[] args)
+        {
+            var context = new ApplicationDbContext(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+
+     var po = context.Poets.ToList();
+            foreach (var PoetId in Poetry.DomainModels.Poet)
+            {
+                Console.WriteLine("{0} {1} {2}", PoetID, Name, AvatarUrl);
+            }
+            Console.ReadLine();
+
+
+             var newPoet = new Poet
+            {    
+                Name = "ссылка",
+                AvatarUrl=http://localhost:1640/Images/a.jpg
+            };
+            context.Poets.InsertOnSubmit(newPoet);
+            context.Poets.Context.SubmitChanges();
+        }
+    }
+
+
+
+
+       
+
+
+
 
         //
         // GET: /Poets/Create
@@ -117,5 +152,6 @@ namespace Mvc4WebApplication.Controllers
                 return View();
             }
         }
-    }
+    
+public  string http { get; set; }}
 }
