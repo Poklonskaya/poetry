@@ -43,36 +43,6 @@ namespace Mvc4WebApplication.Controllers
 
 
 
-        class POETS
-    {
-        static void Main(string[] args)
-        {
-            var context = new ApplicationDbContext(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
-
-     var po = context.Poets.ToList();
-            foreach (var PoetId in Poetry.DomainModels.Poet)
-            {
-                Console.WriteLine("{0} {1} {2}", PoetID, Name, AvatarUrl);
-            }
-            Console.ReadLine();
-
-
-             var newPoet = new Poet
-            {    
-                Name = "ссылка",
-                AvatarUrl=http://localhost:1640/Images/a.jpg
-            };
-            context.Poets.InsertOnSubmit(newPoet);
-            context.Poets.Context.SubmitChanges();
-        }
-    }
-
-
-
-
-       
-
-
 
 
         //

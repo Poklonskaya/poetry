@@ -18,23 +18,7 @@
             </div>
         </div>
     }
-    CREATE TABLE [dbo].[Poet] (
-    [PoetID] INT           IDENTITY (1, 1) NOT NULL,
-    [Name]    NVARCHAR (50) NULL,
-    [AvataUrl]  INT           NULL,
-    PRIMARY KEY CLUSTERED ([PoetID] ASC)
-    )
-    CREATE TABLE [dbo].[Enrollment] (
-    [EnrollmentID] INT IDENTITY (1, 1) NOT NULL,
-    [PoetID]        DECIMAL(3, 2) NULL,
-    [Name]     INT NOT NULL,
-    [AvatarUrl]    INT NOT NULL,
-    PRIMARY KEY CLUSTERED ([EnrollmentID] ASC),
-    CONSTRAINT [FK_dbo.Enrollment_dbo.Poet_PoetID] FOREIGN KEY ([PoetID])
-    REFERENCES [dbo].[Poet] ([PoetID]) ON DELETE CASCADE,
-    CONSTRAINT [FK_dbo.Enrollment_dbo.Name_NameID] FOREIGN KEY ([StudentID])
-    REFERENCES [dbo].[Student] ([StudentID]) ON DELETE CASCADE
-    )
+   
 
 
 </div>
