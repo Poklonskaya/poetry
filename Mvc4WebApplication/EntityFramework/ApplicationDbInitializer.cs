@@ -28,7 +28,7 @@ namespace Mvc4WebApplication.EntityFramework
             poeeets.ForEach(s => context.Poets.Add(s));
             context.SaveChanges();
 
-            // add data to DB
+        
 
         }
     }
