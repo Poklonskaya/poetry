@@ -24,6 +24,9 @@ namespace Mvc4WebApplication.Controllers
             }
 
             return View(poets);
+
+        
+
         }
 
         //
