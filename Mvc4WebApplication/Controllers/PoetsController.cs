@@ -1,10 +1,7 @@
 ﻿using Mvc4WebApplication.EntityFramework;
 using Poetry.DomainModels;
-using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace Mvc4WebApplication.Controllers
@@ -24,9 +21,6 @@ namespace Mvc4WebApplication.Controllers
             }
 
             return View(poets);
-
-        
-
         }
 
         //
@@ -43,10 +37,6 @@ namespace Mvc4WebApplication.Controllers
 
             return View(poet);
         }
-
-
-
-
 
         //
         // GET: /Poets/Create
