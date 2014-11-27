@@ -119,6 +119,5 @@ namespace Mvc4WebApplication.Controllers
                 return View();
             }
         }
-    
-public  string http { get; set; }}
+    }
 }
