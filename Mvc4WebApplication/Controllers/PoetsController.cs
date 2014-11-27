@@ -15,7 +15,7 @@ namespace Mvc4WebApplication.Controllers
         {
             List<Poet> poets;
 
-            using (ApplicationDbContext db = new ApplicationDbContext("DefaultConnection"))
+            using (var db = new ApplicationDbContext("DefaultConnection"))
             {
                 poets = db.Poets.ToList();
             }
@@ -30,7 +30,7 @@ namespace Mvc4WebApplication.Controllers
         {
             Poet poet;
 
-            using (ApplicationDbContext db = new ApplicationDbContext("DefaultConnection"))
+            using (var db = new ApplicationDbContext("DefaultConnection"))
             {
                 poet = db.Poets.FirstOrDefault(x => x.PoetId == id);
             }
@@ -50,11 +50,15 @@ namespace Mvc4WebApplication.Controllers
         // POST: /Poets/Create
 
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(Poet poet)
         {
             try
             {
-                // TODO: Add insert logic here
+                using (var db = new ApplicationDbContext("DefaultConnection"))
+                {
+                    db.Poets.Add(poet);
+                    db.SaveChanges();
+                }
 
                 return RedirectToAction("Index");
             }
