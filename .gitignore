@@ -3,3 +3,4 @@
 
 /packages/*
 !/packages/repositories.config
+*.v12.suo
