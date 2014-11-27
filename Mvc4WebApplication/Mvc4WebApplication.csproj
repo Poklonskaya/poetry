@@ -270,6 +270,7 @@
     <Content Include="Views\Home\Index11.cshtml" />
     <Content Include="Views\Home\Index12.cshtml" />
     <Content Include="Views\Home\Index13.cshtml" />
+    <Content Include="Views\Poets\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
